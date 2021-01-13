@@ -4,7 +4,6 @@ import * as http from 'http';
 import * as helmet from 'helmet';
 import { once } from 'events';
 import { uiConfiguation } from './config';
-import ResourceNotFoundError from './utils/resourceNotFound.error';
 
 export default class Server {
   private app: express.Application;
@@ -28,17 +27,6 @@ export default class Server {
   private configureRoutes() {
     this.app.get('/config', (req, res) => {
       res.send(uiConfiguation);
-    });
-  }
-
-  private configureErrorHandlers() {
-    /* handle all non-existing routes */
-    this.app.all('*', (req, res) => {
-      const err = new ResourceNotFoundError(`Route: ${req.originalUrl} not found`);
-      return res.status(err.status).json({
-        message: err.message,
-        name: err.name,
-      });
     });
   }
 

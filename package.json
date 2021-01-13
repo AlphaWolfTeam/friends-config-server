@@ -9,8 +9,7 @@
     "build": "npm run lint && npm run build-ts",
     "serve": "node dist/index.js",
     "start": "npm run build && npm run serve",
-    "lint": "eslint . --ext .ts",
-    "tslint": "tslint -c tslint.json -p tsconfig.json"
+    "lint": "eslint . --ext .ts"
   },
   "author": "Yael Lustig",
   "license": "ISC",
@@ -23,13 +22,12 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "tslint-config-airbnb": "^5.11.2",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "eslint-config-airbnb": "^18.2.1"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^18.2.1",
     "express": "^4.17.1",
     "helmet": "^4.3.1",
-    "http": "0.0.1-security",
     "morgan": "^1.10.0"
   }
 }
