@@ -5,9 +5,9 @@ export const uiConfiguation = {
     manager_role_value: process.env.MANAGER_ROLE_VALUE || 2,
   },
   length_limitations: {
-    min_group_name: process.env.MIN_GROUP_NAME_LENGTH || 2,
-    min_tag_length: process.env.MIN_TAG_LENGTH || 2,
-    min_user_search_value: process.env.MIN_USER_SEARCH_VALUE || 2,
+    min_length_group_name: process.env.MIN_GROUP_NAME_LENGTH || 2,
+    min_length_tag: process.env.MIN_TAG_LENGTH || 2,
+    min_length_user_search_value: process.env.MIN_USER_SEARCH_VALUE || 2,
   },
   token_name: process.env.AUTH_SERVICE_TOKEN || 'friendsToken',
 };
