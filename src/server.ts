@@ -1,6 +1,7 @@
 import * as logger from 'morgan';
 import * as express from 'express';
 import * as http from 'http';
+import * as cors from 'cors';
 import * as helmet from 'helmet';
 import { once } from 'events';
 import { uiConfiguation } from './config';
@@ -22,6 +23,7 @@ export default class Server {
   private configureMiddlewares() {
     this.app.use(logger('tiny'));
     this.app.use(helmet());
+    this.app.use(cors());
   }
 
   private configureRoutes() {

@@ -1,7 +1,7 @@
 export const uiConfiguation = {
   uri: {
-    api_gateway_uri: process.env.APR_GETWAY_URI || 'http://localhost:3002',
-    auth_service_uri: process.env.AUTH_SERVICE_URI || 'http://localhost:3001',
+    api_gateway_uri: process.env.API_GATEWAY_URI || 'http://localhost:8000',
+    auth_service_uri: process.env.AUTH_SERVICE_URI || 'http://localhost:3002',
   },
   roles: {
     member_role_value: process.env.MEMBER_ROLE_VALUE || 0,
@@ -13,7 +13,7 @@ export const uiConfiguation = {
     min_length_tag: process.env.MIN_LENGTH_TAG_LENGTH || 2,
     min_length_user_search_value: process.env.MIN_LENGTH_USER_SEARCH_VALUE || 2,
   },
-  token_name: process.env.TOKEN_NAME || 'friendsToken',
+  token_name: process.env.TOKEN_NAME || 'friends-token',
 };
 
 export const server = {
