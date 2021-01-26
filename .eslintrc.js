@@ -24,7 +24,7 @@ module.exports = {
   },
   ignorePatterns: ['dist', 'data', 'node_modules'],
   rules: {
-    'linebreak-style': ["error", "windows"],
+    'linebreak-style': 0,
     'import/extensions': [
       'error',
       'ignorePackages',
